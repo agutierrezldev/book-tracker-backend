@@ -1,0 +1,20 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: config-server
+
+  ## Config Server Configuration
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/agutierrezldev/book-tracker-profile
+          defaultLabel: develop
+          cloneOnStart: true
+          refreshRate: 10
+
+## Encrypt key
+encrypt:
+  key: agutierrezl-secret
